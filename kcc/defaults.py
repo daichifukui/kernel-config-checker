@@ -10,6 +10,7 @@ from typing import Dict
 MUST_BE_SET: Dict[str, str] = {}
 MUST_BE_SET_OR_MODULE: Dict[str, str] = {}
 MUST_BE_UNSET: Dict[str, str] = {}
+MUST_BE_MODULE: Dict[str, str] = {}
 
 MUST_BE_SET["CONFIG_RANDOMIZE_BASE"] = "KASLR is required as a basic security hardening"
 MUST_BE_SET["CONFIG_RANDOMIZE_MEMORY"] = "KASLR is required as a basic security hardening"
