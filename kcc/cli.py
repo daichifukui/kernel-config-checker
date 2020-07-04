@@ -34,7 +34,7 @@ def get_expected_opt(opt, msg: str):
     match = re.search("is not set but is required to be set to m", msg)
     if match:
         return opt + "=M \n"  
-    match = re.search("is set  but is required to be set to m", msg)
+    match = re.search("is set but is required to be set to m", msg)
     if match:
         return opt + "=M \n"  
     return ""
