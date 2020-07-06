@@ -18,25 +18,25 @@ def get_expected_opt(opt, msg: str):
     msg = msg.strip()
     match = re.search("is not set but is required to be set to y or m", msg)
     if match:
-        return opt + "=Y \n"  
+        return opt + "=y \n"  
     match = re.search("is not set but is required to be set to y", msg)
     if match:
-        return opt + "=Y \n"  
+        return opt + "=y \n"  
     match = re.search("is set but is required to be not set ", msg)
     if match:
         return "# " + opt + " is not set \n"  
     match = re.search("is set as =m but is required to be set to y", msg)
     if match:
-        return opt + "=Y \n"  
+        return opt + "=y \n"  
     match = re.search("is set as =m but is required to be not set", msg)
     if match:
         return "# " + opt + " is not set \n"  
     match = re.search("is not set but is required to be set to m", msg)
     if match:
-        return opt + "=M \n"  
+        return opt + "=m \n"  
     match = re.search("is set but is required to be set to m", msg)
     if match:
-        return opt + "=M \n"  
+        return opt + "=m \n"  
     return ""
     
 
